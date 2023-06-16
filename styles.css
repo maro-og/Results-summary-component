@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* COLORS */
+    /* PRIMARY COLORS */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavendar: hsl(241, 100%, 89%);
+    --darkgrayblue: hsl(224, 30%, 27%);
+
+    /* NEUTRAL COLORS */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* CARD BG GRADIENTS */
+    --bg-up: hsl(252, 100%, 67%);
+    --bg-down: hsl(241, 81%, 54%);
+
+    /* CIRCLE GRADIENTS */
+    --circle-up: hsla(256, 72%, 46%, 1);
+    --circle-down: hsla(241, 72%, 46%, 0);
+} 
+
+body {
+    height: 100vh;
+    background-color: rgb(224, 223, 223);
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.container {
+    min-width: 375px;
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+
+#your-result {
+    background-image: linear-gradient(var(--bg-up), var(--bg-down));
+    border-radius: 1.5rem;
+    padding: 1.5rem 3rem;
+    text-align: center;
+}
+
+#your-result h2 {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+.circle {
+    margin: auto;
+    height: 140px;
+    width: 140px;
+    padding: 1rem;
+    background-image: linear-gradient(var(--circle-up), var(--circle-down));
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.circle h3 {
+    font-size: 50px;
+    color: var(--white);
+    font-weight: 900;
+}
+
+.circle span {
+    color: var(--white);
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+.remark {
+    color: var(--white);
+    opacity: 0.8;
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+.comment {
+    margin-top: 0.5rem;
+    color: var(--white);
+    opacity: 0.6;
+    font-size: 15px;
+}
+
+#summary {
+    padding: 1.5rem;
+}
+
+.summary {
+    font-size: 20px;
+    opacity: 0.8;
+    margin-top: -5px;
+    margin-bottom: 0.8rem;
+}
+
+.categories {
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.categories div:nth-child(1) {
+    display: flex;
+    font-size: 17px;
+}
+
+.categories div:nth-child(2) {
+    font-size: 17px;
+}
+
+
+
+.dark {
+    opacity: 0.8;
+    margin-right: 4px;
+}
+
+.light {
+    opacity: 0.5;
+}
+
+.red {
+    background-color: hsla(0, 100%, 67%, 0.09);
+}
+
+.yellow {
+    background-color: hsl(39, 100%, 56%, 0.09);
+}
+
+.green {
+    background-color: hsl(166, 100%, 37%, 0.09);
+}
+
+.blue {
+    background-color: hsla(234, 85%, 45%, 0.09);
+}
+
+.reaction {
+    color: hsl(0, 100%, 67%);
+}
+
+.memory {
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+    color: hsl(166, 100%, 37%);
+}
+
+.visual {
+    color: hsl(234, 85%, 45%);
+}
+
+a input {
+    margin-top: 0.4rem;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--darkgrayblue);
+    color: var(--white);
+    font-size: 0.9rem;
+    border: transparent;
+    border-radius: 2rem;
+}
+
+a input:hover {
+    background-color: hsla(253, 95%, 33%, 0.913);
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        flex-direction: row nowrap;
+    }
+
+    .container {
+        max-width: 700px;
+        flex-flow: row nowrap;
+        border-radius: 1.5rem;
+    box-shadow: 5px 10px 50px rgb(198, 195, 195);
+    }
+
+    #summary {
+        min-width: 50%;
+    }
+}
